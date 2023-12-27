@@ -10,7 +10,7 @@ jobs:
         with:
           node-version-file: '.nvmrc'
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
       - name: Install Playwright
         run: npx playwright install --with-deps
       - name: Build Storybook
