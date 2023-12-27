@@ -8,7 +8,6 @@ module.exports = {
      * The context argument is a Storybook object containing the story's id, title, and name.
      */
     async preVisit(page, context) {
-        console.log('pre')
         // Add your configuration here.
     },
     /* Hook to execute after a story is visited and fully rendered.
@@ -16,7 +15,6 @@ module.exports = {
      * The context argument is a Storybook object containing the story's id, title, and name.
      */
     async postVisit(page, context) {
-        console.log('post')
         // Add your configuration here.
     },
 };
