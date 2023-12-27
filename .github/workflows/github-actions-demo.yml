@@ -6,8 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
       - uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
@@ -22,3 +20,5 @@ jobs:
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
             "npx http-server ./packages/app/storybook-static --port 6006" \
             "npx wait-on http-get://127.0.0.1:6006 && npm run test-storybook -w ./packages/app"
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
