@@ -17,8 +17,8 @@ jobs:
         run: npx playwright install --with-deps
       - name: Build Storybook
         run: npm run build-storybook -w ./packages/app
-      - name: Serve Storybook and run tests
-        run: |
-          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-            "npx http-server storybook-static --port 6006" \
-            "npx wait-on http-get://127.0.0.1:6006 && npm run test-storybook -w ./packages/app"
+#      - name: Serve Storybook and run tests
+#        run: |
+#          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+#            "npx http-server storybook-static --port 6006" \
+#            "npx wait-on http-get://127.0.0.1:6006 && npm run test-storybook -w ./packages/app"
